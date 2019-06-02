@@ -9,6 +9,10 @@ class Settings
     default(:uri, ENV['MONGO_URL'])
   end
 
+  config_context :translator do
+    default(:url, ENV['TRANSLATOR_URL'])
+  end
+
   config_context :twilio do
     default(:account_sid, ENV['TWILIO_ACCOUNT_SID'])
     default(:auth_token, ENV['TWILIO_AUTH_TOKEN'])
