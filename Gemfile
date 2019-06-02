@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.0'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jazz_fingers', '~> 4.0'
+gem 'jbuilder', '~> 2.9'
 gem 'mixlib-config', '~> 2.2'
 gem 'mongoid', '~> 7.0'
 gem 'pry-rails', '~> 0.3'
