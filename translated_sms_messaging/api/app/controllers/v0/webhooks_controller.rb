@@ -5,6 +5,7 @@ class V0::WebhooksController < ApplicationController
     data = parse_data(accept_params[:body])
 
     message = translate_message(language: data[:language], message: data[:message])
+    binding.pry
 
     TWILIO_CLIENT.api.account.messages.create(
       from: Settings.twilio.phone_number,
