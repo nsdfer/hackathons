@@ -1,7 +1,3 @@
-# Tony
-
----
-
 ## Prerequisites
 
 1. [brew](http://brew.sh)
