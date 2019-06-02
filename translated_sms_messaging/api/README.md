@@ -27,6 +27,11 @@
   ```sh
   # Required
   MONGO_URL=mongodb://localhost:27017/tony
+
+  TRANSLATOR_URL=...
+  TWILIO_ACCOUNT_SID=...
+  TWILIO_AUTH_TOKEN=...
+  TWILIO_PHONE_NUMBER=...
   ```
 ---
 
@@ -46,5 +51,14 @@
   ```sh
   bin/rails server
   ```
+
 ## Deployment
-TBD
+1. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+1. Add Heroku Git remote
+  ```sh
+  heroku git:remote -a cse-121-tony
+  ```
+1. Push to Heroku remote
+  ```sh
+  git push -f heroku master:master
+  ```
