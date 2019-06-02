@@ -3,27 +3,21 @@
 class V0::UsersController < ApplicationController
   def index
     @users = User.all
-
-    render
   end
 
   def show
     @user = User.find(params[:id])
-
-    render
   end
 
   def create
     @user = User.create!(require_params)
 
-    render
+    VerifyUserService.send_code(@user)
   end
 
   def update
     @user = User.find(params[:id])
     @user.update!(accept_params)
-
-    render
   end
 
   def destroy
@@ -31,6 +25,14 @@ class V0::UsersController < ApplicationController
     @user.destroy!(accept_params)
 
     head :no_content
+  end
+
+  def verify
+    @user = User.find(params[:id])
+
+    return head :unauthorized unless VerifyUserService.verify(user: @user, code: params[:code])
+
+    head :ok
   end
 
   private
