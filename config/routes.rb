@@ -9,5 +9,7 @@ Rails.application.routes.draw do
         post 'verify', to: 'users#verify'
       end
     end
+
+    post 'webhooks/sms_incoming', to: 'webhooks#sms_incoming'
   end
 end
