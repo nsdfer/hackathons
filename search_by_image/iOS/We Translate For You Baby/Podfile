@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'We Translate For You Baby' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for We Translate For You Baby
+  pod 'MessageKit'
+  pod 'Alamofire'
+  pod 'RealmSwift'
+  pod 'PhoneNumberKit'
+
+  target 'We Translate For You BabyTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'We Translate For You BabyUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
